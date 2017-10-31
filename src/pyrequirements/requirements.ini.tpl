@@ -1,15 +1,20 @@
-[os:window]
-pip:django= >=1.9.24, <=1.234
-git:https://github.com/x007007007/pyrequirements.git#branch=CU
+[generate]
+source=://requirements.txt
 
-[os:Mac]
-pip:django=
+[env:test]
+1.cmd=test
 
-[platform:ARMv8]
-pip:
-
-
-[platform:x86,x86_64;os:Mac<10.11,Win]
-pip:
+[platform:armv7l]
+1.pip>luma.oled   =
+2.pip>RPi.GPIO    =
 
 
+[platform:x86]
+source=://requirements.txt
+1.cmd=echo hello world
+2.cmd=echo hi
+pip>django = >1.6
+
+
+[os:Darwin]
+pip>django= <1.9
