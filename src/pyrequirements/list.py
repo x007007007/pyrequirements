@@ -1,5 +1,6 @@
-from .conf import get_config
+from .conf import Conf
 
 
 def get_requirements():
-    get_config()
+    conf = Conf()
+    print(conf.search(platform="x86", os="Darwin"))

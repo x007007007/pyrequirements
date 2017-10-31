@@ -1,7 +1,7 @@
 import sys
 import os
 import pkg_resources
-
+from .list import get_requirements
 def install():
     config_path = os.path.join(os.curdir, "requirements.ini")
     if not os.path.exists(config_path):
@@ -20,4 +20,5 @@ def main():
             if len(sys.argv) > 2:
                 upgrade(sys.argv[2])
             upgrade()
-
+        if sys.argv[1].strip() == "show":
+            print(get_requirements())
