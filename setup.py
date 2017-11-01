@@ -4,10 +4,9 @@ from setuptools import setup, find_packages
 cmdclass = versioneer.get_cmdclass()
 
 
-
 setup(
     name='PyRequirements',
-    version = versioneer.get_version(),
+    version=versioneer.get_version(),
     install_requires=[],
     packages=find_packages('src'),
     package_dir={
@@ -18,7 +17,7 @@ setup(
     },
     include_package_data=True,
     description="python requirements dynamic generation",
-    author = "xuxingci",
+    author="xuxingci",
     author_email="x007007007@hotmail.com",
     license='MIT',
     url='https://github.com/x007007007/pyrequirements/',
@@ -29,10 +28,10 @@ setup(
         'Operating System :: POSIX',
         'Programming Language :: Python',
     ],
-    platforms = [
+    platforms=[
         "RaspberryPi", "Linux", "Unix", "Window", "MacOS"
     ],
-    entry_points = {
+    entry_points={
         'console_scripts': [
             'pyrequirements=pyrequirements.main:main',
         ],
