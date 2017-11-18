@@ -11,7 +11,7 @@ check up mostly requirement conflict
 
 ## Install and Usage
 
-1. `./setup.py install`
+1. `pip install PyRequirements`
 1. `pyrequirements install` this command help to generate requirements.ini
 1. Edit requirements.ini. You should write name of your progress relied, rather then package stay in environment.
 1. `pyrequirements show` Test version infomation
