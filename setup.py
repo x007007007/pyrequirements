@@ -15,7 +15,7 @@ setup(
         "": "src"
     },
     package_data={
-        'pyrequirements': ['*.txt']
+        'pyrequirements': ['resource/requirements.ini']
     },
     include_package_data=True,
     description="python requirements dynamic generation",

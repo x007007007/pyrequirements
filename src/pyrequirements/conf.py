@@ -37,5 +37,5 @@ class Conf(object):
             if not value.get("pkg"):
                 warnings.warn("current python environment don't install required package: {}".format(rp_name), UserWarning)
             else:
-                freeze_list.append("{}={}".format(rp_name, value['pkg'].version))
+                freeze_list.append("{}=={}".format(rp_name, value['pkg'].version))
         return freeze_list
