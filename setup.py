@@ -31,10 +31,10 @@ setup(
         'Operating System :: POSIX',
         'Programming Language :: Python',
     ],
-    platforms = [
+    platforms=[
         "RaspberryPi", "Linux", "Unix", "Window", "MacOS"
     ],
-    entry_points = {
+    entry_points={
         'console_scripts': [
             'pyrequirements=pyrequirements.main:main',
         ],
