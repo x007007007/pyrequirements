@@ -8,7 +8,9 @@ cmdclass = versioneer.get_cmdclass()
 setup(
     name='PyRequirements',
     version = versioneer.get_version(),
-    install_requires=[],
+    install_requires=[
+        "pip"
+    ],
     packages=find_packages('src'),
     package_dir={
         "": "src"
