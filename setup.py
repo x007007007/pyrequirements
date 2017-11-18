@@ -24,7 +24,6 @@ setup(
     license='MIT',
     url='https://github.com/x007007007/pyrequirements/',
     classifiers=[
-        'Environment :: Raspberry',
         'Intended Audience :: Developers',
         'Operating System :: Linux',
         'Operating System :: POSIX',
