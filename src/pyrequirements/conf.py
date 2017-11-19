@@ -1,6 +1,7 @@
 import os
 import pip
 import warnings
+from .core import freeze_version
 try:
     from ConfigParser import ConfigParser
 except:
@@ -29,13 +30,5 @@ class Conf(object):
 
 
     def get_freeze_requirements(self):
-        for installed in pip.get_installed_distributions():
-             if installed.project_name in self.required_projects:
-                 self.required_projects[installed.project_name]['pkg'] = installed
-        freeze_list = []
-        for rp_name, value in self.required_projects.items():
-            if not value.get("pkg"):
-                warnings.warn("current python environment don't install required package: {}".format(rp_name), UserWarning)
-            else:
-                freeze_list.append("{}=={}".format(rp_name, value['pkg'].version))
-        return freeze_list
+        return freeze_version(*self.required_projects.keys())
+
