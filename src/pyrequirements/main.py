@@ -8,7 +8,8 @@ def install():
     config_path = os.path.join(os.curdir, "requirements.ini")
     if not os.path.exists(config_path):
         with open(config_path, "w") as fp:
-            fp.write(pkg_resources.resource_string("pyrequirements", "resource/requirements.ini"))
+            fp.write(pkg_resources.resource_string("pyrequirements", "resource/requirements.ini").decode('utf-8'))
+
 
 def upgrade(name=None):
     print("You should manual run `pip install --upgrade -r requirements.txt`")
